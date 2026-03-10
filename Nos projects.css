@@ -1,0 +1,152 @@
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, rgba(4, 37, 74, 0.9), rgba(27, 87, 150, 0.8)),
+        url("images/projets.jpg") center/cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* INTRO */
+.intro {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
+    font-size: 17px;
+}
+
+/* PROJETS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 40px 8%;
+}
+
+.project-card {
+    background: var(--card);
+    padding: 24px 22px;
+    border-radius: 16px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+.project-card i {
+    font-size: 32px;
+    color: #1b5796;
+}
+
+.project-card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #1b5796;
+}
+
+.project-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4b5a6a;
+}
+
+/* CTA */
+.cta {
+    background-color: #1b5796;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 40px;
+}
+
+.cta h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+}
+
+.cta a {
+    text-decoration: none;
+    background: white;
+    color: #1b5796;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/*  VERSION TÉLÉPHONE */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .intro {
+        font-size: 15px;
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .project-card {
+        padding: 22px 18px;
+    }
+
+    .project-card h3 {
+        font-size: 18px;
+    }
+
+    .project-card p {
+        font-size: 14px;
+    }
+
+    .cta {
+        padding: 40px 15px;
+    }
+
+    .cta h2 {
+        font-size: 24px;
+    }
+
+    .cta p {
+        font-size: 15px;
+    }
+
+    .cta a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

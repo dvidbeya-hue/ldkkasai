@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ONG Lumière du Kasaï</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                ONG <span>LUMIERE DU KASAÏ</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="A propos.html"><i class="fas fa-circle-info"></i> À propos</a></li>
+                <li><a href="Nos projects.html"><i class="fas fa-seedling"></i> Nos Projets</a></li>
+                <li><a href="Contact.html"><i class="fas fa-user"></i> Contact</a></li>
+            </ul>
+
+            <div class="logos">
+                <img src="images/LOGO.png" alt="Logo ONG Lumière du Kasaï">
+            </div>
+        </nav>
+    </header>
+
+    <!-- SECTION CONTACT -->
+    <section class="contact-ong" id="contact">
+
+        <!-- Intro -->
+        <div class="contact-hero">
+            <h2>Contactez-nous</h2>
+            <p>
+                Nous sommes là pour répondre à vos questions, vos idées ou vos suggestions.
+                Ensemble, construisons un impact durable.
+            </p>
+        </div>
+
+        <!-- FORM + INFOS -->
+        <div class="contact-container">
+
+            <!-- FORMULAIRE -->
+            <div class="contact-form">
+                <form action="#" method="POST">
+
+                    <label for="name">
+                        <i class="fa fa-user"></i> Nom complet
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                    <label for="email">
+                        <i class="fa fa-envelope"></i> Email
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+                    <label for="message">
+                        <i class="fa fa-comment"></i> Message
+                    </label>
+                    <textarea id="message" name="message" rows="6" placeholder="Votre message" required></textarea>
+
+                    <button type="submit" class="contact-btn">
+                        <a href="https://wa.me/243990959322?text=Bonjour%20je%20vous%20contact%20depuis%20votre%20site"
+                            target="_blank"><i class=" fa fa-paper-plane"></i> Envoyer</a>
+
+                    </button>
+
+                </form>
+            </div>
+
+            <!-- INFOS ONG -->
+            <div class="contact-info">
+                <h3><i class="fa fa-info-circle"></i> Nos coordonnées</h3>
+
+                <p><i class="fa fa-map-marker-alt"></i> Kasaï Central, RDC</p>
+                <p><i class="fa fa-phone"></i> +243 123 456 789</p>
+                <p><i class="fa fa-envelope"></i> contact@onglumiere.org</p>
+
+                <h3><i class="fa fa-share-alt"></i> Suivez-nous</h3>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-globe"></i> Site</a>
+                    <a href="#"><i class="fa fa-f"></i> Facebook</a>
+                    <a href="#"><i class="fa fa-i"></i> Instagram</a>
+                    <a href="#"><i class="fa fa-"></i> Twitter</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MAP -->
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps?q=Kinshasa&output=embed" width="100%" height="350"
+                style="border:0;" loading="lazy">
+            </iframe>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

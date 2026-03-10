@@ -1,0 +1,444 @@
+/* Palette générale adaptée au logo */
+:root {
+    --primary: #1b5796;
+    --secondary: #27ae60;
+    --accent: #ffd54a;
+    --bg: #e6effa;         /* fond général légèrement bleuté */
+    --card: #f5f9ff;       /* cartes et sections, pas blanc pur */
+    --text: #1b2634;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Configuration de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+/* Barre de navigation commune (toutes les pages) */
+.navbar {
+    position: sticky; /* reste visible au scroll */
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8%;
+    background: var(--card);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* LOGO IMAAGE */
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logos img {
+    height: 80px;
+    width: auto;
+    /*border-radius: 100%;*/
+
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 0;
+    padding: 0;
+}
+
+.logo span {
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: 0.3s;
+    background-color: #e9f3ff;
+    padding: 7px 12px;
+    border-radius: 12px;
+}
+
+.nav-links a:hover {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(4, 37, 74, 0.85), rgba(4, 37, 74, 0.8)),
+        url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+/* Boutons */
+.btn-primary,
+.btn-secondary {
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #1b5796;
+    border: 2px solid white;
+    color: white;
+    transform: rotate(0deg);
+    color: #f4f4f4;
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    background: white;
+    color: #1b5796;
+
+}
+
+.btn-secondary:hover {
+    transform: scale(1.05);
+    background: #1b5796;
+    color: white;
+
+}
+
+/*      SECTION TABLETTE       */
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .logos img {
+        height: 55px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .stats {
+        padding: 40px 5%;
+        gap: 20px;
+    }
+}
+
+
+/*      TELEPHONE SECTION      */
+
+@media (max-width: 600px) {
+
+    body {
+        background-position: top;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    ul {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .stats {
+        padding: 30px 15px;
+    }
+
+    .stat-item h2 {
+        font-size: 2rem;
+    }
+
+    footer {
+        padding: 25px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Objet Social Layout */
+.objet-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgb(11, 148, 207);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.commitment {
+    flex: 1;
+    text-align: left;
+}
+
+.lines {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+    overflow: visible;
+}
+
+.line {
+    height: 4px;
+    border-radius: 2px;
+}
+
+.line.blue {
+    background-color: blue;
+}
+
+.line.yellow {
+    background-color: yellow;
+}
+
+.line.long {
+    width: 120%;
+}
+
+.line.medium {
+    width: 100%;
+}
+
+.line.short {
+    width: 80%;
+}
+
+.photo {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.sts-label {
+    flex: 1;
+    text-align: center;
+    background-color: #1b5796;
+    border-radius: 25px;
+}
+
+.sts-label h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Responsive for Objet Social */
+@media(max-width:768px) {
+    .objet-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .commitment,
+    .sts-label {
+        text-align: center;
+    }
+
+    .photos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .photos img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Statistiques */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-size: 2.5rem;
+    color: #1b5796;
+}
+
+/* Domaines d'intervention (home) */
+.domains {
+    padding: 60px 8%;
+    background: var(--bg);
+}
+
+.domains-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.domains-header h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.domains-header p {
+    color: #4b5a6a;
+}
+
+.domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+.domain-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 24px 20px;
+    box-shadow: 0 8px 18px var(--shadow);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.domain-card i {
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+.domain-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.domain-card p {
+    font-size: 0.95rem;
+}
+
+.domain-link {
+    margin-top: auto;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.domain-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #2c3e50;
+    color: white;
+}
+
+/* Adaptabilité Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    /* Pour simplifier, on cache le menu ici */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+}
